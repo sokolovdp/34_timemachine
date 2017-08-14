@@ -15,6 +15,7 @@ var timerContainerID = "timerContainer";
 function addTimerHtmlToCurrentPage(timerContainerId, timerHtml) {
   var timerContainer = document.createElement("div");
   timerContainer.id = timerContainerId;
+  
   var bodyTag = document.body;
   bodyTag.insertBefore(timerContainer, bodyTag.firstChild);
   timerContainer.innerHTML = timerHtml;
@@ -25,18 +26,13 @@ document.getElementById(timerContainerID).setAttribute("style", timerContainerSt
 document.getElementById(timerImageID).setAttribute("style", timerImageStyle);
 document.getElementById(timerTextID).setAttribute("style", timerTextStyle);
 
-var INITIAL_TIMEOUT_IN_SECS = 3 * 60;
-var SUBSEQUENT_TIMEOUT_IN_SECS = 30;
-var NAG_MESSAGES = [
+var initialTimeOut = 3 * 60;
+var smallTimeOut = 30;
+var latinProverb = [
   "Acta non verba",
-  "Cui caput dolet, omnia membra languent",
-  "Duo lepores qui insequitur, neutrum capit",
   "Dum spiro, spero",
   "Medice, cura te ipsum",
-  "Non alios suo modulo metire",
-  "Omnia cum pretio",
   "Periculum in mora",
-  "Post hoc, ergo propter hoc",
   "Qui dormit non peccat",
   "Quod licet Iovi, non licet bovi",
   "Memento mori",
@@ -82,7 +78,7 @@ function playAlarm(){
 }
 
 async function startNagging() {
-  var timeoutInSecs = INITIAL_TIMEOUT_IN_SECS;
+  var timeoutInSecs = initialTimeOut;
 
   
       playAlarm();
@@ -99,8 +95,8 @@ async function startNagging() {
       playAlarm();
     
 
-    alert(NAG_MESSAGES.randomElement().toUpperCase());
-    timeoutInSecs = SUBSEQUENT_TIMEOUT_IN_SECS;
+    alert(latinProverb.randomElement().toUpperCase());
+    timeoutInSecs = smallTimeOut;
   }
 }
 
