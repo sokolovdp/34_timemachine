@@ -26,8 +26,8 @@ document.getElementById(timerContainerID).setAttribute("style", timerContainerSt
 document.getElementById(timerImageID).setAttribute("style", timerImageStyle);
 document.getElementById(timerTextID).setAttribute("style", timerTextStyle);
 
-var initialTimeOut = 3 * 60;
-var smallTimeOut = 30;
+var initialTimeOut = 1 * 60;
+var smallTimeOut = 15;
 var latinProverb = [
   "Acta non verba",
   "Dum spiro, spero",
@@ -68,6 +68,9 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function randomInt(range) {
+	return Math.floor((Math.random() * range));
+}
 
 function playAlarm(){
        var audio = document.getElementById("timerAlarm");
@@ -77,24 +80,21 @@ function playAlarm(){
 async function startNagging() {
   var timeoutInSecs = initialTimeOut;
 
-  
-      playAlarm();
-  
-
   while (true) {
     var timestampOnStart = getTimestampInSecs(timeoutInSecs);
-    var currentTimerIntervalId = setInterval(displayTimer.bind(null, timeoutInSecs, timestampOnStart), 300);
+    var currentTimerIntervalId = setInterval(displayTimer.bind(null, timeoutInSecs, timestampOnStart), 200);
 
     await sleep(timeoutInSecs * 1000);
     clearInterval(currentTimerIntervalId);
-
     
       playAlarm();
     
-
-    alert(latinProverb.randomElement().toUpperCase());
+    alert(latinProverb[randomInt(latinProverb.length)].toUpperCase() + " !");
     timeoutInSecs = smallTimeOut;
   }
 }
+
+
+   playAlarm();
 
 startNagging()
