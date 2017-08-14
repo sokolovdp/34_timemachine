@@ -68,9 +68,6 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-Array.prototype.randomElement = function() {
-      return this[Math.floor(Math.random() * this.length)];
-}
 
 function playAlarm(){
        var audio = document.getElementById("timerAlarm");
