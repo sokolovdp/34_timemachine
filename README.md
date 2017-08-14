@@ -4,7 +4,7 @@ This project uses "code injection" technique, to inject timer code into pages of
 
 # Installing
 
-To generate index.js injection code  was used staticjinja package.
+To generate index.js injection code  was used **staticjinja** package.
 
 Install extension for Chrome browser [Custom JavaScript for websites](https://chrome.google.com/webstore/detail/custom-javascript-for-web/poakhlngfciodnhlhhgnaaelnpjljija).
 
