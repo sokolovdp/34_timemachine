@@ -11,9 +11,10 @@ Install extension for Chrome browser [Custom JavaScript for websites](https://ch
 1) Open configuration of [CJS](https://chrome.google.com/webstore/detail/custom-javascript-for-web/poakhlngfciodnhlhhgnaaelnpjljija) 
 browser extension on the site you want to controll, then paste **index.js** with timer code into CJS window.
 
-2) You can also load into CJS short JS code from file **rawgit_starter.js**,  which will upload index.js from RAW GIT CDN
+2) You can upload into CJS short JS code from file **rawgit_starter.js**,  which will upload index.js from RAW GIT CDN
 
-3) Or you in CJS click on the link "your own external scripts", and add the following path:  [timer](https://cdn.rawgit.com/sokolovdp/34_timemachine/4a3516c3/index.js)
+3) You also can click on the link "your own external scripts", and add the following path:  
+https://cdn.rawgit.com/sokolovdp/34_timemachine/4a3516c3/index.js
 
 
 
