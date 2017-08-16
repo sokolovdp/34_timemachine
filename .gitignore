@@ -2,14 +2,10 @@
 images/
 samples/
 .idea/
-timer/
-templates/
 
 #files
-*.bat
-*.txt
 *.bak
-*.py
+
 
 
 

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+
+    </head>
+    <body>
+        {% for n in range(number_p) %}
+            <p  style="background: {{ background_color }};">
+                {% include '_loren.txt' %}
+            </p>
+        {% endfor %}
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>
